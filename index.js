@@ -7,6 +7,7 @@ function saveForm(event) {
         email: document.getElementById('email').value,
         subject: document.getElementById('subject').value,
         message: document.getElementById('message').value,
+        number : document.getElementById('number').value,
     };
 
     let headers = new Headers();
@@ -55,9 +56,10 @@ function saveComment(event) {
     var email = document.getElementById('email').value;
     var name = document.getElementById('name').value;
     var website = document.getElementById('website').value;
+    var number = document.getElementById('number').value;
 
     // Validate form fields
-    if (!blogId || !comment || !email || !name || !website) {
+    if (!blogId || !comment || !email || !name || !website || !number) {
         Swal.fire({
             title: 'Error!',
             text: 'Please fill in all fields.',
@@ -72,7 +74,8 @@ function saveComment(event) {
         comment: comment,
         email: email,
         name: name,
-        website: website
+        website: website,
+        number: number
     };
 
     console.log("Sending data:", CommentForm); // Log the data being sent
