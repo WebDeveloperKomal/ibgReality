@@ -202,3 +202,4 @@ function saveContractForm(event) {
 }
 
 
+// ******************* Footer Contact ***********************
